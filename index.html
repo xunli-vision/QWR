@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Queryable 3D Scene Representation: a multi-modal framework for semantic reasoning and robotic task planning, presented at ACM Multimedia 2025.">
+  <meta name="theme-color" content="#f7f8fa">
+  <title>Queryable 3D Scene Representation</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero" id="top">
+    <div class="container hero-content">
+      <p class="eyebrow">ACM Multimedia 2025 · Dublin, Ireland</p>
+      <h1>Queryable 3D Scene Representation:<br class="desktop-break"> A Multi-Modal Framework for Semantic Reasoning and Robotic Task Planning</h1>
+
+      <p class="authors">
+        Xun Li<sup>1</sup>, Rodrigo Santa Cruz<sup>2</sup>, Mingze Xi<sup>3</sup>,
+        Hu Zhang<sup>1</sup>, Madhawa Perera<sup>3</sup>, Ziwei Wang<sup>2</sup>,
+        Ahalya Ravendran<sup>1</sup>, Brandon J. Matthews<sup>3</sup>, Feng Xu<sup>1</sup>,
+        Matt Adcock<sup>3</sup>, Dadong Wang<sup>1</sup>, and Jiajun Liu<sup>2</sup>
+      </p>
+      <p class="affiliations">
+        <sup>1</sup> CSIRO, Sydney, NSW, Australia <span aria-hidden="true">·</span>
+        <sup>2</sup> CSIRO, Pullenvale, QLD, Australia <span aria-hidden="true">·</span>
+        <sup>3</sup> CSIRO, Canberra, ACT, Australia
+      </p>
+
+      <!-- The Paper link opens the supplied PDF. Replace the Video and Code targets when those resources are ready. -->
+      <nav class="resource-links" aria-label="Project resources">
+        <a class="resource-button" href="https://arxiv.org/pdf/2509.20077"><span aria-hidden="true">▤</span> Paper</a>
+        <a class="resource-button" href="#experiments-title"><span aria-hidden="true">▶</span> Video</a>
+        <a class="resource-button" href="https://github.com/"><span aria-hidden="true">⌘</span> Code</a>
+        <a class="resource-button" href="https://doi.org/10.1145/3746027.3758177"><span aria-hidden="true">↗</span> DOI</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section teaser-section" aria-labelledby="teaser-title">
+      <div class="container">
+        <div class="teaser-visual">
+          <img src="assets/abstract_example.png" alt="Project workflow diagram">
+        </div>
+        <h2 class="teaser-caption" id="teaser-title">A queryable 3D scene representation for connecting human intent with robotic actions.</h2>
+      </div>
+    </section>
+
+    <section class="section section-soft" aria-labelledby="abstract-title">
+      <div class="container narrow text-center">
+        <p class="section-kicker">Overview</p>
+        <h2 id="abstract-title">Abstract</h2>
+        <p class="placeholder-copy">Robots need scene representations that combine accurate geometry with semantics people can express in natural language. We introduce 3D Queryable Scene Representation (3D QSR), an object-centric framework that unifies 3D-consistent novel-view rendering and panoptic segmentation, precise point-cloud geometry, and structured 3D scene graphs. By linking multimodal object embeddings with large vision-language models, 3D QSR supports object-level retrieval of visual, semantic, and geometric information. Retrieved scene information can then guide robotic task planning. We evaluate the framework in Unity using the Replica dataset and in a digital duplicate of a real wet lab for emergency-response planning.</p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="method-title">
+      <div class="container">
+        <div class="narrow text-center">
+          <p class="section-kicker">How it works</p>
+          <h2 id="method-title">Method</h2>
+          <p class="placeholder-copy">The framework builds complementary NeRF-based scene reconstructions, point clouds, and scene graphs from RGB video and optional point-cloud data. Multi-view captions enrich scene objects with attributes and functions; vision-language embeddings make those objects searchable from natural-language queries. The retrieved objects, spatial properties, and relationships are passed to a task planner for navigation and object-retrieval actions.</p>
+        </div>
+        <img class="method-figure" src="assets/workflow.png" alt="3D Queryable Scene Representation workflow diagram">
+      </div>
+    </section>
+
+    <section class="section section-soft" aria-labelledby="experiments-title">
+      <div class="container">
+        <div class="narrow section-heading text-center">
+          <p class="section-kicker">See the system in action</p>
+          <h2 id="experiments-title">Experiments</h2>
+          <p class="placeholder-copy">Object retrieval is evaluated across point-cloud, NeRF, and scene-graph representations on six Replica scenes. The demonstrations also show natural-language scene queries, Unity-based robot navigation, emergency-response planning in a wet-lab digital duplicate, and exploratory LLM-assisted scene consolidation.</p>
+        </div>
+
+        <div class="video-grid">
+          <!-- To add a video: copy one .video-card, change its heading and description, and update the source path. -->
+          <article class="video-card">
+            <h3>Demo 01 <span>·</span> Anything Fragile In The Room</h3>
+            <video controls playsinline preload="metadata" aria-label="Demonstration video 1">
+              <source src="videos/01.mp4" type="video/mp4">
+              Your browser does not support HTML video.
+            </video>
+          </article>
+          <article class="video-card">
+            <h3>Demo 02 <span>·</span> Emergency Response in Lab</h3>
+            <video controls playsinline preload="metadata" aria-label="Demonstration video 2">
+              <source src="videos/02.mp4" type="video/mp4">
+              Your browser does not support HTML video.
+            </video>
+          </article>
+          <article class="video-card">
+            <h3>Demo 03 <span>·</span> Find Book And Reading Spot</h3>
+            <video controls playsinline preload="metadata" aria-label="Demonstration video 3">
+              <source src="videos/03.mp4" type="video/mp4">
+              Your browser does not support HTML video.
+            </video>
+          </article>
+          <article class="video-card">
+            <h3>Demo 04 <span>·</span> Something That Needs Watering</h3>
+            <video controls playsinline preload="metadata" aria-label="Demonstration video 4">
+              <source src="videos/04.mp4" type="video/mp4">
+              Your browser does not support HTML video.
+            </video>
+          </article>
+          <article class="video-card">
+            <h3>Demo 05 <span>·</span> Somewhere To Sit Other Than Chair</h3>
+            <video controls playsinline preload="metadata" aria-label="Demonstration video 5">
+              <source src="videos/05.mp4" type="video/mp4">
+              Your browser does not support HTML video.
+            </video>
+          </article>
+          <article class="video-card">
+            <h3>Demo 06 <span>·</span> Somewhere To Take A Call</h3>
+            <video controls playsinline preload="metadata" aria-label="Demonstration video 6">
+              <source src="videos/06.mp4" type="video/mp4">
+              Your browser does not support HTML video.
+            </video>
+          </article>
+          <!-- <article class="video-card">
+            <h3>Demo 07 <span>·</span> Wet-Lab Emergency Response</h3>
+            <p>Show the robot locating emergency equipment in a lab digital duplicate.</p>
+            <video controls playsinline preload="metadata" aria-label="Demonstration video 7">
+              <source src="videos/demo-07.mp4" type="video/mp4">
+              Your browser does not support HTML video.
+            </video>
+          </article>
+          <article class="video-card">
+            <h3>Demo 08 <span>·</span> LLM-Assisted Task Planning</h3>
+            <p>Show scene consolidation and task planning with iterative reasoning.</p>
+            <video controls playsinline preload="metadata" aria-label="Demonstration video 8">
+              <source src="videos/demo-08.mp4" type="video/mp4">
+              Your browser does not support HTML video.
+            </video>
+          </article> -->
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="bibtex-title">
+      <div class="container narrow">
+        <p class="section-kicker">For citation</p>
+        <h2 id="bibtex-title">BibTeX</h2>
+        <pre class="bibtex"><code>@inproceedings{li2025queryable,
+  title     = {Queryable 3D Scene Representation: A Multi-Modal Framework for Semantic Reasoning and Robotic Task Planning},
+  author    = {Li, Xun and Santa Cruz, Rodrigo and Xi, Mingze and Zhang, Hu and Perera, Madhawa and Wang, Ziwei and Ravendran, Ahalya and Matthews, Brandon J. and Xu, Feng and Adcock, Matt and Wang, Dadong and Liu, Jiajun},
+  booktitle = {Proceedings of the 33rd ACM International Conference on Multimedia},
+  pages     = {12492--12500},
+  year      = {2025},
+  doi       = {10.1145/3746027.3758177}
+}</code></pre>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="people" aria-labelledby="people-title">
+      <div class="container narrow text-center">
+        <p class="section-kicker">Project team</p>
+        <h2 id="people-title">People</h2>
+        <p class="placeholder-copy">All authors are affiliated with CSIRO. The paper lists team members across Sydney, Canberra, and Pullenvale.</p>
+        <div class="people-grid">
+          <article class="person-card">
+            <div class="person-avatar" aria-hidden="true">SYD</div>
+            <h3>Sydney, NSW</h3>
+            <p>Xun Li · Hu Zhang · Ahalya Ravendran · Feng Xu · Dadong Wang</p>
+          </article>
+          <article class="person-card">
+            <div class="person-avatar" aria-hidden="true">CAN</div>
+            <h3>Canberra, ACT</h3>
+            <p>Mingze Xi · Madhawa Perera · Brandon J. Matthews · Matt Adcock</p>
+          </article>
+          <article class="person-card">
+            <div class="person-avatar" aria-hidden="true">PUL</div>
+            <h3>Pullenvale, QLD</h3>
+            <p>Rodrigo Santa Cruz · Ziwei Wang · Jiajun Liu</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>Project page template inspired by the <a href="https://github.com/vlmaps/vlmaps.github.io">VLMaps project page</a>.</p>
+      <a class="back-to-top" href="#top">Back to top ↑</a>
+    </div>
+  </footer>
+</body>
+</html>
